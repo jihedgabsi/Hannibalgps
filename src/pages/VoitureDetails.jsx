@@ -15,7 +15,7 @@ const VoitureDetails = () => {
     useEffect(() => {
         const fetchGpsData = async () => {
             try {
-                const res = await axios.get(`http://localhost:3000/api/gps/${id}`);
+                const res = await axios.get(`http://e0oowcgs8kk0gkkoks84swso.157.180.35.88.sslip.io/api/gps/${id}`);
                 setGpsData(res.data);
             } catch (err) {
                 console.error("Erreur API :", err);
