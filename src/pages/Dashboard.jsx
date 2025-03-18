@@ -14,7 +14,7 @@ const Dashboard = () => {
     useEffect(() => {
         const fetchClientAndVoitures = async () => {
             try {
-                const clientRes = await axios.get(`http://localhost:3000/api/clients/${clientId}`);
+                const clientRes = await axios.get(`http://e0oowcgs8kk0gkkoks84swso.157.180.35.88.sslip.io/api/clients/${clientId}`);
                 const voitureIds = clientRes.data.voitures || [];
 
                 if (voitureIds.length === 0) {
@@ -24,7 +24,7 @@ const Dashboard = () => {
                 }
 
                 const voiturePromises = voitureIds.map(id =>
-                    axios.get(`http://localhost:3000/api/voitures/${id}`).then(res => res.data)
+                    axios.get(`http://e0oowcgs8kk0gkkoks84swso.157.180.35.88.sslip.io/api/voitures/${id}`).then(res => res.data)
                 );
 
                 const voituresData = await Promise.all(voiturePromises);
