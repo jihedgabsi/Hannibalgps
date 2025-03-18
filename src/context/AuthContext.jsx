@@ -8,7 +8,7 @@ export const AuthProvider = ({ children }) => {
 
     const login = async (email, password) => {
         try {
-            const res = await axios.post("http://localhost:5000/api/auth/login", { email, password });
+            const res = await axios.post("http://http://e0oowcgs8kk0gkkoks84swso.157.180.35.88.sslip.io/api/auth/login", { email, password });
             setUser(res.data.client);
             localStorage.setItem("token", res.data.token);
         } catch (error) {
